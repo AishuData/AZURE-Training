@@ -1,0 +1,9 @@
+{
+	"name": "Azuretrainingdf2024",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "99c817dc-f8fd-431e-8c4b-b8380652a201",
+		"tenantId": "f4037720-a797-4dfc-8563-d866d93e4528"
+	}
+}
