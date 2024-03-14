@@ -18,7 +18,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "Select Order ID ,Category , Sub Category , Profit , Sales from [dbo].[blinketgrocery]",
+							"value": "SELECT \n    Category,\n    Sub_Category,\n    SUM(Profit) AS Total_Profit,\n    SUM(Sales) AS Total_Sales\nFROM \n    [dbo].[blinketgrocery]\nGROUP BY \n  Category, Sub_Category;",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
@@ -27,7 +27,8 @@
 					"dataset": {
 						"referenceName": "AzureSqlTable2",
 						"type": "DatasetReference"
-					}
+					},
+					"firstRowOnly": false
 				}
 			}
 		],
